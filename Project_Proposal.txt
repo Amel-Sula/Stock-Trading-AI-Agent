@@ -1,0 +1,53 @@
+Project Title
+
+Design and Implementation of an Intelligent Trading Agent Using Machine Learning
+
+Group Members
+
+Amel Sula 
+Aldinio Nurce
+Dion Toska
+
+
+Problem Description
+
+Financial markets involve sequential decision-making under uncertainty. The goal of this project is to design an intelligent trading agent that autonomously decides whether to buy, sell, or hold a stock based on historical market data. The agent operates in a simulated trading environment and aims to maximize profit while minimizing risk.
+
+This project focuses on applying core artificial intelligence concepts such as learning, rational decision-making, and performance evaluation, rather than real-world trading deployment.
+
+
+Proposed AI Techniques
+
+The project will integrate two different AI techniques covered in the course:
+
+Statistical Learning (Machine Learning)
+A supervised learning model (Decision Tree or Random Forest) will be trained on historical stock data to predict short-term price movement (Up or Down). Features may include price changes, moving averages, and trading volume.
+
+Rule-Based Decision Making / Search-Based Planning
+The output of the learning model will be used by a decision-making component that determines the agent’s action (Buy, Sell, Hold). This component will follow rational rules or a simple search-based evaluation of possible actions based on expected reward.
+
+This integration allows the agent to learn from data and reason about actions, satisfying the requirement for a non-trivial intelligent agent.
+
+
+Agent Environment (PEAS Framework)
+
+Performance Measure: Prediction accuracy, total simulated profit/loss
+Environment: Historical stock market data (simulated, offline)
+Actuators: Buy, Sell, Hold
+Sensors: Stock prices, derived technical indicators
+
+
+Evaluation Plan
+
+The learning model will be evaluated using quantitative metrics such as Accuracy and F1-score.
+The trading agent’s performance will be evaluated based on total profit and compared against baseline strategies such as a random trader or a buy-and-hold strategy.
+
+
+Ethical Considerations
+
+Automated trading systems can contribute to market instability and may provide unfair advantages to individuals with access to advanced AI technologies. This project is developed strictly for educational purposes and highlights the importance of responsible AI usage and transparency in financial systems.
+
+
+Expected Outcomes
+
+The project is expected to demonstrate a functional intelligent agent that combines learning and decision-making. The final system will show how AI techniques can be applied to sequential decision problems under uncertainty.

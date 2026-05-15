@@ -1,0 +1,17 @@
+=== Classification Metrics (Test Set) ===
+Ticker  Accuracy  Precision  Recall     F1
+  AAPL    0.4978     0.5488  0.3719 0.4433
+  TSLA    0.5333     0.5414  0.7203 0.6182
+   AMD    0.5111     0.5254  0.5345 0.5299
+  NFLX    0.5022     0.5238  0.4701 0.4955
+     F    0.4756     0.4762  0.3509 0.4040
+   AVG    0.5040     0.5231  0.4895 0.4982
+
+=== Financial Metrics (Backtest) ===
+Ticker  Agent return%  Agent maxDD%  Agent trades  BuyHold return%  BuyHold maxDD%  BuyHold trades  Random return%  Random maxDD%  Random trades
+  AAPL           0.15          0.24         20.00             0.40            0.29            1.00            0.07           0.33          50.00
+  TSLA           1.00          0.44         21.00             0.47            0.95            1.00            0.58           0.51          50.00
+   AMD           0.16          0.40         23.00             0.63            0.35            1.00            0.24           0.26          50.00
+  NFLX           0.11          0.07         17.00             0.12            0.13            1.00            0.01           0.11          50.00
+     F           0.02          0.02         21.00            -0.01            0.06            1.00            0.03           0.02          50.00
+   AVG           0.29          0.23         20.40             0.32            0.36            1.00            0.19           0.25          50.00

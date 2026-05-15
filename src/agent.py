@@ -35,7 +35,7 @@ class TradingAgent:
                 return "SELL"
 
         # Trend definitions
-        uptrend = (sma_5 >= sma_10) and (price >= sma_10)
+        uptrend = (sma_5 >= sma_10)
         downtrend = (sma_5 < sma_10) and (price < sma_10)
 
         if not state.holding:

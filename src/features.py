@@ -13,6 +13,13 @@ def rsi(series: pd.Series, period: int = 14) -> pd.Series:
     rs = avg_gain / (avg_loss + 1e-9)
     return 100 - (100 / (1 + rs))
 
+def macd(series: pd.Series, fast: int = 12, slow: int = 26, signal: int = 9):
+    ema_fast = series.ewm(span=fast, adjust=False).mean()
+    ema_slow = series.ewm(span=slow, adjust=False).mean()
+    macd_line = ema_fast - ema_slow
+    signal_line = macd_line.ewm(span=signal, adjust=False).mean()
+    return macd_line, signal_line
+
 def make_features(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
@@ -58,6 +65,11 @@ def make_features(df: pd.DataFrame) -> pd.DataFrame:
     # RSI
     df["rsi_14"] = rsi(df["Close"], 14)
 
+    # MACD
+    macd_vals = macd(df["Close"], fast=12, slow=26, signal=9)
+    df["macd"] = macd_vals[0]
+    df["macd_signal"] = macd_vals[1]
+
     # Label: next-day direction
     df["y_up"] = (df["Close"].shift(-1) > df["Close"]).astype(int)
 
@@ -72,5 +84,7 @@ def feature_columns() -> list[str]:
         "vol_5", "mom_5",
         "volchg_1",
         "rsi_14",
-        "sma_ratio"
+        "sma_ratio",
+        "macd",
+        "macd_signal",
     ]

@@ -12,9 +12,9 @@ class Config:
     fee_rate: float = 0.001      # 0.1% per trade
 
     # Agent policy thresholds
-    buy_threshold: float = 0.48  # P(up) >= this and trend ok => buy
-    sell_threshold: float = 0.45 # P(up) <= this or trend breaks => sell
-    stop_loss: float = 0.06      # -3% from entry => sell
-    take_profit: float = 0.50   # +5% from entry => sell
+    buy_threshold: float = 0.42  # P(up) >= this and trend ok => buy
+    sell_threshold: float = 0.40 # P(up) <= this or trend breaks => sell
+    stop_loss: float = 0.08      # -3% from entry => sell
+    take_profit: float = 0.25   # +5% from entry => sell
 
     seed: int = 42
